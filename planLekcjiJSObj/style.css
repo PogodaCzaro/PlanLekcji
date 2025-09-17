@@ -1,0 +1,70 @@
+﻿:root {
+    --font-primary: 'Roboto', sans-serif;
+    --color: #e0e0e0;
+    --bg: #1e1e1e;
+    --table-bg: #2a2a2a;
+    --table-border: #444;
+    --th-bg: #333;
+    --th-color: #ffffff;
+    --hour-bg: #222;
+    --hour-color: #84ff00;
+    --font-size: 3vh;
+    --hour-font-size: 3vh;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--bg);
+    padding: 20px;
+    color: var(--color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vh;
+    margin-bottom: 11vh;
+    background: linear-gradient(270deg, #ff0000, #ff7f00, #ffd700, #8b0000);
+    background-size: 1400% 1400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 10s ease infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--table-bg);
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid var(--table-border);
+    padding: 20px;
+    text-align: center;
+    font-size: var(--font-size);
+    word-wrap: break-word;
+}
+
+th {
+    background: var(--th-bg);
+    color: var(--th-color);
+}
+
+td:first-child, th:first-child {
+    font-weight: bold;
+    width: 120px;
+    background: var(--hour-bg);
+    color: var(--hour-color);
+    font-size: var(--hour-font-size);
+}
+
+td:not(:first-child), th:not(:first-child) {
+    width: 100px;
+}
